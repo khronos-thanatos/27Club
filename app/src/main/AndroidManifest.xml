@@ -27,7 +27,16 @@
             android:name=".activity.WelcomeGuideActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_welcome_guide"
-            android:theme="@style/FullscreenTheme"></activity>
+            android:theme="@style/FullscreenTheme" />
+        <activity android:name=".activity.MainActivity">
+
+        </activity>
+        <activity
+            android:name=".activity.YoutubePlayerActivity"
+            android:label="@string/title_activity_youtube_player"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        
     </application>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 
 </manifest>
