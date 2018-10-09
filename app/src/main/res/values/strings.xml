@@ -1,9 +1,13 @@
 <resources>
-    <string name="app_name">27Club</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name">27俱乐部</string>
+    <string name="navigation_drawer_open">打开导航抽屉</string>
+    <string name="navigation_drawer_close">关闭导航抽屉</string>
+    <string name="nav_header_title">乔尼</string>
+    <string name="nav_header_subtitle">khronos.thanatos@gmail.com</string>
+    <string name="nav_header_desc">导航描述</string>
+    <string name="action_settings">设置</string>
+
+    <string name="title_activity_welcome_guide">WelcomeGuideActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>
