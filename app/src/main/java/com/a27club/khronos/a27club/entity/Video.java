@@ -6,49 +6,40 @@ import android.os.Parcelable;
 import com.google.gson.annotations.SerializedName;
 
 public class Video implements Parcelable {
-   @SerializedName("Title")  private String Title;
-    @SerializedName("Link") private String Link;
-    @SerializedName("Thumb") private String Thumb;
+    @SerializedName("Title") private String Title;
+    @SerializedName("link") private String link;
+    @SerializedName("thumb") private String thumb;
+
+    public String getThumb() {
+        return thumb;
+    }
+    public void setThumb(String thumb) {
+        this.thumb = thumb;
+    }
+
+    public String getLink() {
+        return link;
+    }
+    public void setLink(String link) {
+        this.link = link;
+    }
 
     public String getTitle() {
         return Title;
     }
-
     public void setTitle(String title) {
         Title = title;
     }
 
-    public String getLink() {
-        return Link;
-    }
-
-    public void setLink(String link) {
-        Link = link;
-    }
-
-    public String getThumb() {
-        return Thumb;
-    }
-
-    public void setThumb(String thumb) {
-        Thumb = thumb;
-    }
-
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    public Video(Parcel in) {
-        Thumb = in.readString();
-        Link = in.readString();
+    private Video(Parcel in) {
+        thumb = in.readString();
+        link = in.readString();
         Title = in.readString();
     }
-
     public static final Creator<Video> CREATOR = new Creator<Video>() {
         @Override
-        public Video createFromParcel(Parcel source) {
-            return new Video(source);
+        public Video createFromParcel(Parcel in) {
+            return new Video(in);
         }
 
         @Override
@@ -56,11 +47,14 @@ public class Video implements Parcelable {
             return new Video[size];
         }
     };
-
     @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(Thumb);
-        dest.writeString(Link);
-        dest.writeString(Title);
+    public int describeContents() {
+        return 0;
+    }
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(thumb);
+        parcel.writeString(link);
+        parcel.writeString(Title);
     }
 }

@@ -32,7 +32,7 @@ public class MainActivity  extends BaseActivity<MainPresenter> implements MainAc
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this,this);
 
-        createPresenter(this).getData();
+        presenter.getData();
 
     }
 

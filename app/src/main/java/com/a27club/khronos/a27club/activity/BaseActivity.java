@@ -11,8 +11,9 @@ import com.a27club.khronos.a27club.presenter.BasePresenter;
 
 public abstract class BaseActivity<Presenter extends BasePresenter> extends AppCompatActivity {
 
-    public  Presenter presenter;
+    protected   Presenter presenter;
 
+    @NonNull
     public abstract Presenter createPresenter(@NonNull final Context context);
 
     @Override
